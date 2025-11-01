@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: hive_metastore  # or your catalog name
+    schema: bronze
+    tables:
+      - name: allstate_claims
+        description: "Raw Allstate claims data from Kaggle"
+        columns:
+          - name: id
+            description: "Unique claim identifier"
+          - name: loss
+            description: "Target variable - claim loss amount"
